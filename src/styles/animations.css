@@ -1,0 +1,21 @@
+.animate-down {
+    transform: translateY(-100vh);
+    animation: animate-down var(--animate-speed) cubic-bezier(0,.99,1,.94) forwards;
+}
+
+@keyframes animate-down {
+    100% {
+        transform: translateY(0vh);
+    }
+}
+
+.animate-right {
+    transform: translateX(-100vw);
+    animation: animate-right var(--animate-speed) forwards cubic-bezier(0,.99,1,.94);
+}
+
+@keyframes animate-right {
+    100% {
+        transform: translateX(0vw);
+    }
+}

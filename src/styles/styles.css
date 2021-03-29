@@ -1,0 +1,94 @@
+:root {
+  --page-1-color: steelblue;
+  --page-2-color: tan;
+  --page-3-color: teal;
+  --page-4-color: slateblue;
+  --dark: rgba(51, 51, 51, 0.9);
+  --light: white;
+  --overlay-color: rgba(24, 39, 51, 0.9);
+  --animate-speed: 1s;
+  --menu-speed: 0.75s;
+}
+
+html {
+  /* always scrolls to next scroll-snap-align child  */
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: white;
+  overflow-x: hidden;
+  /* Hides horizontal scroll bars.  */
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+}
+
+p {
+}
+
+/* spacers */
+.spacer-1 {
+  margin: 1rem;
+}
+.spacer-2 {
+  margin: 2rem;
+}
+
+/* Page Color */
+#page-1 {
+  background: var(--page-1-color);
+}
+#page-2 {
+  background: var(--page-2-color);
+}
+#page-3 {
+  background: var(--page-3-color);
+}
+#page-4 {
+  background: var(--page-4-color);
+}
+
+.page {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 4rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #f4f4f4;
+  color: var(--dark);
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease-in;
+}
+
+.btn:hover,
+.btn-dark {
+  background: var(--dark);
+  color: var(--light);
+}
+
+.btn-dark:hover {
+  background: var(--light);
+  color: var(--dark);
+}
